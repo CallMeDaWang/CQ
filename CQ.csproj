@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1EA52075-7449-4C29-9DED-20AC70C742DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CQ</RootNamespace>
+    <AssemblyName>CQ</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.8.4.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="IKAnalyzerNet">
+      <HintPath>C:\Users\Administrator\Downloads\IKAnalyzerNet\IKAnalyzerNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>C:\Users\Administrator\Downloads\IKAnalyzerNet\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>C:\Users\Administrator\Downloads\IKAnalyzerNet\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=3.13.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.13.0\lib\net45\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bll\CollectDropDownKey.cs" />
+    <Compile Include="Bll\KeySearch.cs" />
+    <Compile Include="Bll\WordAnalyzer.cs" />
+    <Compile Include="Entity\DropDownBoxResult.cs" />
+    <Compile Include="Entity\KeySearchResult.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Apasstips.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Auction.cs" />
+    <Compile Include="Entity\KeySearchSubCs\AuctionNum.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Bgshopstar.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Bottomsearch.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Breadcrumbs.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Catpath.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Choosecar.cs" />
+    <Compile Include="Entity\KeySearchSubCs\D11filterbar.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data10.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data2.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data3.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data4.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data5.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data6.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data7.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data8.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Data9.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Debugbar.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Dropdown.cs" />
+    <Compile Include="Entity\KeySearchSubCs\DropdownList.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Feature.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Feedback.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Filter.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Header.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Hongbao.cs" />
+    <Compile Include="Entity\KeySearchSubCs\I2iTags.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Icon.cs" />
+    <Compile Include="Entity\KeySearchSubCs\IconPopupComplex.cs" />
+    <Compile Include="Entity\KeySearchSubCs\IconPopupNormal.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Itemlist.cs" />
+    <Compile Include="Entity\KeySearchSubCs\LevelClass.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Location.cs" />
+    <Compile Include="Entity\KeySearchSubCs\MainInfo.cs" />
+    <Compile Include="Entity\KeySearchSubCs\ModLinks.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Mods.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Nav.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Navtablink.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Navtabtags.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Noresult.cs" />
+    <Compile Include="Entity\KeySearchSubCs\P4p.cs" />
+    <Compile Include="Entity\KeySearchSubCs\P4pconfig.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Pager.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Pager2.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Personalbar.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Phonenav.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Price.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Rank.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Related.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Samestyle.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Sc.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Shopcard.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Shopcombo.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Shopcombotip.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Shopstar.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Similar.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Sortbar.cs" />
+    <Compile Include="Entity\KeySearchSubCs\SortList.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Spucombo.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Spuseries.cs" />
+    <Compile Include="Entity\KeySearchSubCs\SrpGlobal.cs" />
+    <Compile Include="Entity\KeySearchSubCs\SubIcon.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Supertab.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Tab.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Tab2.cs" />
+    <Compile Include="Entity\KeySearchSubCs\TabParams.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Tbcode.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Tips.cs" />
+    <Compile Include="Entity\KeySearchSubCs\TraceData.cs" />
+    <Compile Include="Entity\KeySearchSubCs\TraceData2.cs" />
+    <Compile Include="Entity\KeySearchSubCs\TraceInfo.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Vbaby.cs" />
+    <Compile Include="Entity\KeySearchSubCs\Word.cs" />
+    <Compile Include="Entity\Param.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Spider\TbSpider.cs" />
+    <Compile Include="Entity\GoodsCondition.cs" />
+    <Compile Include="Utils\JsonHelper.cs" />
+    <Compile Include="Utils\ListViewHelper.cs" />
+    <Compile Include="Utils\PageObjects\ByAll.cs" />
+    <Compile Include="Utils\PageObjects\ByChained.cs" />
+    <Compile Include="Utils\PageObjects\ByFactory.cs" />
+    <Compile Include="Utils\PageObjects\ByIdOrName.cs" />
+    <Compile Include="Utils\PageObjects\CacheLookupAttribute.cs" />
+    <Compile Include="Utils\PageObjects\DefaultElementLocator.cs" />
+    <Compile Include="Utils\PageObjects\DefaultPageObjectMemberDecorator.cs" />
+    <Compile Include="Utils\PageObjects\FindsByAllAttribute.cs" />
+    <Compile Include="Utils\PageObjects\FindsByAttribute.cs" />
+    <Compile Include="Utils\PageObjects\FindsBySequenceAttribute.cs" />
+    <Compile Include="Utils\PageObjects\How.cs" />
+    <Compile Include="Utils\PageObjects\IElementLocator.cs" />
+    <Compile Include="Utils\PageObjects\IPageObjectMemberDecorator.cs" />
+    <Compile Include="Utils\PageObjects\PageFactory.cs" />
+    <Compile Include="Utils\PageObjects\RetryingElementLocator.cs" />
+    <Compile Include="Utils\PageObjects\WebDriverObjectProxy.cs" />
+    <Compile Include="Utils\PageObjects\WebElementListProxy.cs" />
+    <Compile Include="Utils\PageObjects\WebElementProxy.cs" />
+    <Compile Include="Utils\RequestHelper.cs" />
+    <Compile Include="Utils\RequestUrlHelper.cs" />
+    <Compile Include="Utils\WaitHelpers\ExpectedConditions.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="XmlConfig\log4net.config" />
+    <None Include="XmlConfig\system.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="XmlConfig\database.xml" />
+    <Content Include="XmlConfig\DataTables_CN.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

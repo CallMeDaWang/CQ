@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ConnectionList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <DbConnectionConfig  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Name>TypeConnection</Name>
+      <DbType> BPPC.DataAccess.MySqlHelper</DbType>
+      <DbAssembly>BPPC.DataAccess</DbAssembly>
+      <Values>Server=192.168.2.11;Port=3306;Database=myshopcmconnect;Uid=root;Pwd=000000;</Values>
+    </DbConnectionConfig>
+  </Items>
+</ConnectionList>
