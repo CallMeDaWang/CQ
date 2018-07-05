@@ -51,11 +51,6 @@ namespace CQ
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.关键字采集 = new System.Windows.Forms.TabPage();
             this.copy = new System.Windows.Forms.Button();
-            this.keySearchResult = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.participleResult = new System.Windows.Forms.ListView();
             this.button2 = new System.Windows.Forms.Button();
@@ -64,15 +59,37 @@ namespace CQ
             this.dropDownBoxKey = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.copyType = new System.Windows.Forms.ComboBox();
-            this.checkAll = new System.Windows.Forms.CheckBox();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.copyParticipleResult = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.checkPic = new System.Windows.Forms.Button();
+            this.waitCheckItem = new System.Windows.Forms.DataGridView();
+            this.keySearchResult = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.标题 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.价格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.店铺 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.previous = new System.Windows.Forms.Button();
+            this.notQualify = new System.Windows.Forms.Button();
+            this.qualify = new System.Windows.Forms.Button();
+            this.next = new System.Windows.Forms.Button();
+            this.copyChecked = new System.Windows.Forms.Button();
+            this.编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.标题1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkItem = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.关键字采集.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.waitCheckItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keySearchResult)).BeginInit();
             this.SuspendLayout();
             // 
             // Submit
@@ -234,74 +251,37 @@ namespace CQ
             // 
             this.tabControl1.Controls.Add(this.关键字采集);
             this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(907, 474);
+            this.tabControl1.Size = new System.Drawing.Size(1377, 777);
             this.tabControl1.TabIndex = 7;
             // 
             // 关键字采集
             // 
-            this.关键字采集.Controls.Add(this.checkAll);
+            this.关键字采集.Controls.Add(this.keySearchResult);
+            this.关键字采集.Controls.Add(this.checkPic);
             this.关键字采集.Controls.Add(this.copyType);
             this.关键字采集.Controls.Add(this.copy);
-            this.关键字采集.Controls.Add(this.keySearchResult);
             this.关键字采集.Controls.Add(this.groupBox2);
             this.关键字采集.Location = new System.Drawing.Point(4, 22);
             this.关键字采集.Name = "关键字采集";
             this.关键字采集.Padding = new System.Windows.Forms.Padding(3);
-            this.关键字采集.Size = new System.Drawing.Size(899, 448);
+            this.关键字采集.Size = new System.Drawing.Size(1369, 751);
             this.关键字采集.TabIndex = 1;
             this.关键字采集.Text = "关键字采集";
             this.关键字采集.UseVisualStyleBackColor = true;
             // 
             // copy
             // 
-            this.copy.Location = new System.Drawing.Point(161, 168);
+            this.copy.Location = new System.Drawing.Point(80, 168);
             this.copy.Name = "copy";
             this.copy.Size = new System.Drawing.Size(75, 23);
             this.copy.TabIndex = 17;
             this.copy.Text = "复制";
             this.copy.UseVisualStyleBackColor = true;
             this.copy.Click += new System.EventHandler(this.copy_Click);
-            // 
-            // keySearchResult
-            // 
-            this.keySearchResult.CheckBoxes = true;
-            this.keySearchResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.keySearchResult.FullRowSelect = true;
-            this.keySearchResult.GridLines = true;
-            this.keySearchResult.Location = new System.Drawing.Point(6, 197);
-            this.keySearchResult.Name = "keySearchResult";
-            this.keySearchResult.Size = new System.Drawing.Size(887, 248);
-            this.keySearchResult.TabIndex = 5;
-            this.keySearchResult.UseCompatibleStateImageBehavior = false;
-            this.keySearchResult.View = System.Windows.Forms.View.Details;
-            this.keySearchResult.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Id";
-            this.columnHeader1.Width = 90;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "标题";
-            this.columnHeader2.Width = 375;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "价格";
-            this.columnHeader3.Width = 93;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "店铺";
-            this.columnHeader4.Width = 110;
             // 
             // tabPage1
             // 
@@ -315,7 +295,7 @@ namespace CQ
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(899, 448);
+            this.tabPage1.Size = new System.Drawing.Size(1369, 751);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "标题组合";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -329,7 +309,7 @@ namespace CQ
             this.participleResult.GridLines = true;
             this.participleResult.Location = new System.Drawing.Point(8, 259);
             this.participleResult.Name = "participleResult";
-            this.participleResult.Size = new System.Drawing.Size(226, 183);
+            this.participleResult.Size = new System.Drawing.Size(226, 486);
             this.participleResult.TabIndex = 8;
             this.participleResult.UseCompatibleStateImageBehavior = false;
             this.participleResult.View = System.Windows.Forms.View.Details;
@@ -350,6 +330,7 @@ namespace CQ
             this.dropDownBoxResult.Location = new System.Drawing.Point(8, 42);
             this.dropDownBoxResult.Multiline = true;
             this.dropDownBoxResult.Name = "dropDownBoxResult";
+            this.dropDownBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dropDownBoxResult.Size = new System.Drawing.Size(226, 182);
             this.dropDownBoxResult.TabIndex = 3;
             this.dropDownBoxResult.TextChanged += new System.EventHandler(this.dropDownBoxResult_TextChanged);
@@ -390,22 +371,11 @@ namespace CQ
             "标题",
             "价格",
             "店铺"});
-            this.copyType.Location = new System.Drawing.Point(87, 170);
+            this.copyType.Location = new System.Drawing.Point(6, 170);
             this.copyType.Name = "copyType";
             this.copyType.Size = new System.Drawing.Size(68, 20);
             this.copyType.TabIndex = 18;
             this.copyType.SelectedIndexChanged += new System.EventHandler(this.copyType_SelectedIndexChanged);
-            // 
-            // checkAll
-            // 
-            this.checkAll.AutoSize = true;
-            this.checkAll.Location = new System.Drawing.Point(9, 172);
-            this.checkAll.Name = "checkAll";
-            this.checkAll.Size = new System.Drawing.Size(78, 16);
-            this.checkAll.TabIndex = 17;
-            this.checkAll.Text = "全选/反选";
-            this.checkAll.UseVisualStyleBackColor = true;
-            this.checkAll.CheckedChanged += new System.EventHandler(this.checkAll_CheckedChanged);
             // 
             // columnHeader5
             // 
@@ -431,11 +401,204 @@ namespace CQ
             this.copyParticipleResult.Text = "复制";
             this.copyParticipleResult.UseVisualStyleBackColor = true;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.checkItem);
+            this.tabPage2.Controls.Add(this.copyChecked);
+            this.tabPage2.Controls.Add(this.next);
+            this.tabPage2.Controls.Add(this.qualify);
+            this.tabPage2.Controls.Add(this.notQualify);
+            this.tabPage2.Controls.Add(this.previous);
+            this.tabPage2.Controls.Add(this.waitCheckItem);
+            this.tabPage2.Controls.Add(this.webBrowser2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1369, 751);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "鉴图";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser2
+            // 
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.webBrowser2.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.Size = new System.Drawing.Size(908, 745);
+            this.webBrowser2.TabIndex = 1;
+            // 
+            // checkPic
+            // 
+            this.checkPic.Location = new System.Drawing.Point(161, 168);
+            this.checkPic.Name = "checkPic";
+            this.checkPic.Size = new System.Drawing.Size(75, 23);
+            this.checkPic.TabIndex = 19;
+            this.checkPic.Text = "鉴图";
+            this.checkPic.UseVisualStyleBackColor = true;
+            this.checkPic.Click += new System.EventHandler(this.checkPic_Click);
+            // 
+            // waitCheckItem
+            // 
+            this.waitCheckItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.waitCheckItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.编号,
+            this.标题1});
+            this.waitCheckItem.Location = new System.Drawing.Point(923, 6);
+            this.waitCheckItem.Name = "waitCheckItem";
+            this.waitCheckItem.RowTemplate.Height = 23;
+            this.waitCheckItem.Size = new System.Drawing.Size(446, 346);
+            this.waitCheckItem.TabIndex = 10;
+            // 
+            // keySearchResult
+            // 
+            this.keySearchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.keySearchResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.标题,
+            this.价格,
+            this.店铺});
+            this.keySearchResult.Location = new System.Drawing.Point(6, 197);
+            this.keySearchResult.Name = "keySearchResult";
+            this.keySearchResult.RowTemplate.Height = 23;
+            this.keySearchResult.Size = new System.Drawing.Size(659, 548);
+            this.keySearchResult.TabIndex = 20;
+            this.keySearchResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.keySearchResult_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 80;
+            // 
+            // 标题
+            // 
+            this.标题.DataPropertyName = "标题";
+            this.标题.HeaderText = "标题";
+            this.标题.Name = "标题";
+            this.标题.Width = 375;
+            // 
+            // 价格
+            // 
+            this.价格.DataPropertyName = "价格";
+            this.价格.HeaderText = "价格";
+            this.价格.Name = "价格";
+            this.价格.Width = 60;
+            // 
+            // 店铺
+            // 
+            this.店铺.DataPropertyName = "店铺";
+            this.店铺.HeaderText = "店铺";
+            this.店铺.Name = "店铺";
+            this.店铺.Width = 70;
+            // 
+            // previous
+            // 
+            this.previous.Location = new System.Drawing.Point(923, 358);
+            this.previous.Name = "previous";
+            this.previous.Size = new System.Drawing.Size(75, 23);
+            this.previous.TabIndex = 11;
+            this.previous.Text = "上一个";
+            this.previous.UseVisualStyleBackColor = true;
+            this.previous.Click += new System.EventHandler(this.previous_Click);
+            // 
+            // notQualify
+            // 
+            this.notQualify.Location = new System.Drawing.Point(1166, 358);
+            this.notQualify.Name = "notQualify";
+            this.notQualify.Size = new System.Drawing.Size(75, 23);
+            this.notQualify.TabIndex = 12;
+            this.notQualify.Text = "不合格";
+            this.notQualify.UseVisualStyleBackColor = true;
+            // 
+            // qualify
+            // 
+            this.qualify.Location = new System.Drawing.Point(1085, 358);
+            this.qualify.Name = "qualify";
+            this.qualify.Size = new System.Drawing.Size(75, 23);
+            this.qualify.TabIndex = 13;
+            this.qualify.Text = "合格";
+            this.qualify.UseVisualStyleBackColor = true;
+            this.qualify.Click += new System.EventHandler(this.qualify_Click);
+            // 
+            // next
+            // 
+            this.next.Location = new System.Drawing.Point(1004, 358);
+            this.next.Name = "next";
+            this.next.Size = new System.Drawing.Size(75, 23);
+            this.next.TabIndex = 14;
+            this.next.Text = "下一个";
+            this.next.UseVisualStyleBackColor = true;
+            this.next.Click += new System.EventHandler(this.next_Click);
+            // 
+            // copyChecked
+            // 
+            this.copyChecked.Location = new System.Drawing.Point(1288, 357);
+            this.copyChecked.Name = "copyChecked";
+            this.copyChecked.Size = new System.Drawing.Size(75, 23);
+            this.copyChecked.TabIndex = 15;
+            this.copyChecked.Text = "复制";
+            this.copyChecked.UseVisualStyleBackColor = true;
+            this.copyChecked.Click += new System.EventHandler(this.copyChecked_Click);
+            // 
+            // 编号
+            // 
+            this.编号.DataPropertyName = "ID";
+            this.编号.FillWeight = 90F;
+            this.编号.HeaderText = "编号";
+            this.编号.Name = "编号";
+            this.编号.Width = 90;
+            // 
+            // 标题1
+            // 
+            this.标题1.DataPropertyName = "标题";
+            this.标题1.FillWeight = 375F;
+            this.标题1.HeaderText = "标题1";
+            this.标题1.Name = "标题1";
+            this.标题1.Width = 375;
+            // 
+            // checkItem
+            // 
+            this.checkItem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.checkItem.GridLines = true;
+            this.checkItem.Location = new System.Drawing.Point(923, 387);
+            this.checkItem.Name = "checkItem";
+            this.checkItem.Size = new System.Drawing.Size(440, 358);
+            this.checkItem.TabIndex = 16;
+            this.checkItem.UseCompatibleStateImageBehavior = false;
+            this.checkItem.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "标题";
+            this.columnHeader2.Width = 375;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Id",
+            "标题"});
+            this.comboBox1.Location = new System.Drawing.Point(1288, 386);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(68, 20);
+            this.comboBox1.TabIndex = 19;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 498);
+            this.ClientSize = new System.Drawing.Size(1401, 801);
             this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
             this.Text = "lkl";
@@ -444,9 +607,11 @@ namespace CQ
             this.groupBox2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.关键字采集.ResumeLayout(false);
-            this.关键字采集.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.waitCheckItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keySearchResult)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -479,17 +644,31 @@ namespace CQ
         private System.Windows.Forms.ListView participleResult;
         private CheckBox userLike;
         private Button copy;
-        private ListView keySearchResult;
-        private ColumnHeader columnHeader1;
-        private ColumnHeader columnHeader2;
-        private ColumnHeader columnHeader3;
-        private ColumnHeader columnHeader4;
         private ComboBox copyType;
-        private CheckBox checkAll;
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
         private ColumnHeader columnHeader7;
         private Button copyParticipleResult;
+        private TabPage tabPage2;
+        private WebBrowser webBrowser2;
+        private Button checkPic;
+        private DataGridView waitCheckItem;
+        private DataGridView keySearchResult;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn 标题;
+        private DataGridViewTextBoxColumn 价格;
+        private DataGridViewTextBoxColumn 店铺;
+        private Button previous;
+        private Button copyChecked;
+        private Button next;
+        private Button qualify;
+        private Button notQualify;
+        private DataGridViewTextBoxColumn 编号;
+        private DataGridViewTextBoxColumn 标题1;
+        private ListView checkItem;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ComboBox comboBox1;
     }
 }
 
