@@ -158,6 +158,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spider\TbSpider.cs" />
     <Compile Include="Entity\GoodsCondition.cs" />
+    <Compile Include="Utils\Common.cs" />
     <Compile Include="Utils\JsonHelper.cs" />
     <Compile Include="Utils\ListViewHelper.cs" />
     <Compile Include="Utils\PageObjects\ByAll.cs" />

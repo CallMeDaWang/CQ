@@ -12,10 +12,12 @@ namespace CQ.Bll
     public class KeySearch
     {
         private GoodsCondition gc;
+        CookieContainer cookie;
 
         public KeySearch(GoodsCondition gc)
         {
             this.gc = gc;
+            cookie = RequestHelper.GetCookie("http://www.taobao.com", "GET");
         }
 
         public string Key { get; set; }
@@ -115,7 +117,6 @@ namespace CQ.Bll
             param.p4ppushleft = ",44";
             param.s = gc.s.ToString();
             string url = RequestUrlHelper.CreateUrl(baseUrl, param);
-            CookieContainer cookie = RequestHelper.GetCookie("http://www.taobao.com", "GET");
             string content = RequestHelper.GetContent(cookie, url);
             KeySearchResult result = JsonHelper.DeserializeJsonToObject<KeySearchResult>(content);
             return result;

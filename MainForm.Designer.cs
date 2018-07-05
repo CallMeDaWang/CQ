@@ -50,20 +50,25 @@ namespace CQ
             this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.关键字采集 = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.copy = new System.Windows.Forms.Button();
             this.keySearchResult = new System.Windows.Forms.ListView();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.participleResult = new System.Windows.Forms.ListView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.article = new System.Windows.Forms.TextBox();
-            this.dropDownBoxResult = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dropDownBoxKey = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.participleResult = new System.Windows.Forms.ListView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dropDownBoxResult = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dropDownBoxKey = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.copyType = new System.Windows.Forms.ComboBox();
+            this.checkAll = new System.Windows.Forms.CheckBox();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.copyParticipleResult = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.关键字采集.SuspendLayout();
@@ -218,7 +223,7 @@ namespace CQ
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 38);
+            this.label2.Location = new System.Drawing.Point(186, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 3;
@@ -232,30 +237,33 @@ namespace CQ
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1164, 700);
+            this.tabControl1.Size = new System.Drawing.Size(907, 474);
             this.tabControl1.TabIndex = 7;
             // 
             // 关键字采集
             // 
-            this.关键字采集.Controls.Add(this.button3);
+            this.关键字采集.Controls.Add(this.checkAll);
+            this.关键字采集.Controls.Add(this.copyType);
+            this.关键字采集.Controls.Add(this.copy);
             this.关键字采集.Controls.Add(this.keySearchResult);
             this.关键字采集.Controls.Add(this.groupBox2);
             this.关键字采集.Location = new System.Drawing.Point(4, 22);
             this.关键字采集.Name = "关键字采集";
             this.关键字采集.Padding = new System.Windows.Forms.Padding(3);
-            this.关键字采集.Size = new System.Drawing.Size(1156, 674);
+            this.关键字采集.Size = new System.Drawing.Size(899, 448);
             this.关键字采集.TabIndex = 1;
             this.关键字采集.Text = "关键字采集";
             this.关键字采集.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // copy
             // 
-            this.button3.Location = new System.Drawing.Point(6, 168);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "采集";
-            this.button3.UseVisualStyleBackColor = true;
+            this.copy.Location = new System.Drawing.Point(161, 168);
+            this.copy.Name = "copy";
+            this.copy.Size = new System.Drawing.Size(75, 23);
+            this.copy.TabIndex = 17;
+            this.copy.Text = "复制";
+            this.copy.UseVisualStyleBackColor = true;
+            this.copy.Click += new System.EventHandler(this.copy_Click);
             // 
             // keySearchResult
             // 
@@ -269,17 +277,37 @@ namespace CQ
             this.keySearchResult.GridLines = true;
             this.keySearchResult.Location = new System.Drawing.Point(6, 197);
             this.keySearchResult.Name = "keySearchResult";
-            this.keySearchResult.Size = new System.Drawing.Size(897, 255);
+            this.keySearchResult.Size = new System.Drawing.Size(887, 248);
             this.keySearchResult.TabIndex = 5;
             this.keySearchResult.UseCompatibleStateImageBehavior = false;
             this.keySearchResult.View = System.Windows.Forms.View.Details;
             this.keySearchResult.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Id";
+            this.columnHeader1.Width = 90;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "标题";
+            this.columnHeader2.Width = 375;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "价格";
+            this.columnHeader3.Width = 93;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "店铺";
+            this.columnHeader4.Width = 110;
+            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.copyParticipleResult);
             this.tabPage1.Controls.Add(this.participleResult);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.article);
             this.tabPage1.Controls.Add(this.dropDownBoxResult);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.dropDownBoxKey);
@@ -287,17 +315,21 @@ namespace CQ
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1156, 674);
+            this.tabPage1.Size = new System.Drawing.Size(899, 448);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "标题组合";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // participleResult
             // 
+            this.participleResult.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7});
             this.participleResult.GridLines = true;
             this.participleResult.Location = new System.Drawing.Point(8, 259);
             this.participleResult.Name = "participleResult";
-            this.participleResult.Size = new System.Drawing.Size(574, 404);
+            this.participleResult.Size = new System.Drawing.Size(226, 183);
             this.participleResult.TabIndex = 8;
             this.participleResult.UseCompatibleStateImageBehavior = false;
             this.participleResult.View = System.Windows.Forms.View.Details;
@@ -305,7 +337,7 @@ namespace CQ
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(240, 230);
+            this.button2.Location = new System.Drawing.Point(8, 230);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
@@ -313,21 +345,12 @@ namespace CQ
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // article
-            // 
-            this.article.Location = new System.Drawing.Point(240, 15);
-            this.article.Multiline = true;
-            this.article.Name = "article";
-            this.article.Size = new System.Drawing.Size(342, 209);
-            this.article.TabIndex = 4;
-            this.article.TextChanged += new System.EventHandler(this.article_TextChanged);
-            // 
             // dropDownBoxResult
             // 
             this.dropDownBoxResult.Location = new System.Drawing.Point(8, 42);
             this.dropDownBoxResult.Multiline = true;
             this.dropDownBoxResult.Name = "dropDownBoxResult";
-            this.dropDownBoxResult.Size = new System.Drawing.Size(226, 209);
+            this.dropDownBoxResult.Size = new System.Drawing.Size(226, 182);
             this.dropDownBoxResult.TabIndex = 3;
             this.dropDownBoxResult.TextChanged += new System.EventHandler(this.dropDownBoxResult_TextChanged);
             // 
@@ -358,25 +381,55 @@ namespace CQ
             this.label6.Text = "关键词";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // columnHeader1
+            // copyType
             // 
-            this.columnHeader1.Text = "Id";
-            this.columnHeader1.Width = 90;
+            this.copyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.copyType.FormattingEnabled = true;
+            this.copyType.Items.AddRange(new object[] {
+            "Id",
+            "标题",
+            "价格",
+            "店铺"});
+            this.copyType.Location = new System.Drawing.Point(87, 170);
+            this.copyType.Name = "copyType";
+            this.copyType.Size = new System.Drawing.Size(68, 20);
+            this.copyType.TabIndex = 18;
+            this.copyType.SelectedIndexChanged += new System.EventHandler(this.copyType_SelectedIndexChanged);
             // 
-            // columnHeader2
+            // checkAll
             // 
-            this.columnHeader2.Text = "标题";
-            this.columnHeader2.Width = 375;
+            this.checkAll.AutoSize = true;
+            this.checkAll.Location = new System.Drawing.Point(9, 172);
+            this.checkAll.Name = "checkAll";
+            this.checkAll.Size = new System.Drawing.Size(78, 16);
+            this.checkAll.TabIndex = 17;
+            this.checkAll.Text = "全选/反选";
+            this.checkAll.UseVisualStyleBackColor = true;
+            this.checkAll.CheckedChanged += new System.EventHandler(this.checkAll_CheckedChanged);
             // 
-            // columnHeader3
+            // columnHeader5
             // 
-            this.columnHeader3.Text = "价格";
-            this.columnHeader3.Width = 93;
+            this.columnHeader5.Text = "关键词";
+            this.columnHeader5.Width = 76;
             // 
-            // columnHeader4
+            // columnHeader6
             // 
-            this.columnHeader4.Text = "店铺";
-            this.columnHeader4.Width = 110;
+            this.columnHeader6.Text = "出现次数";
+            this.columnHeader6.Width = 75;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "出现频率";
+            this.columnHeader7.Width = 70;
+            // 
+            // copyParticipleResult
+            // 
+            this.copyParticipleResult.Location = new System.Drawing.Point(89, 230);
+            this.copyParticipleResult.Name = "copyParticipleResult";
+            this.copyParticipleResult.Size = new System.Drawing.Size(75, 23);
+            this.copyParticipleResult.TabIndex = 9;
+            this.copyParticipleResult.Text = "复制";
+            this.copyParticipleResult.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -391,6 +444,7 @@ namespace CQ
             this.groupBox2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.关键字采集.ResumeLayout(false);
+            this.关键字采集.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
@@ -422,15 +476,20 @@ namespace CQ
         private System.Windows.Forms.TextBox dropDownBoxKey;
         private System.Windows.Forms.TextBox dropDownBoxResult;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox article;
         private System.Windows.Forms.ListView participleResult;
         private CheckBox userLike;
-        private Button button3;
+        private Button copy;
         private ListView keySearchResult;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
+        private ComboBox copyType;
+        private CheckBox checkAll;
+        private ColumnHeader columnHeader5;
+        private ColumnHeader columnHeader6;
+        private ColumnHeader columnHeader7;
+        private Button copyParticipleResult;
     }
 }
 

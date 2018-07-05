@@ -14,8 +14,13 @@ namespace CQ
         public MainForm()
         {
             InitializeComponent();
+            this.keyWord.Text = "玻璃胶";
+            this.minPayNum.Text = "2";
+            this.maxPayNum.Text = "100";
+            this.userLike.Checked = true;
+            this.collectNum.Text = "15";
         }
-        private void button1_Click(object sender, EventArgs e)
+        private async void  button1_Click(object sender, EventArgs e)
         {
             GoodsCondition gc = new GoodsCondition();
             gc.keyWord = this.keyWord.Text;
@@ -146,12 +151,12 @@ namespace CQ
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string article = this.article.Text;
+            string article = this.dropDownBoxResult.Text;
             WordAnalyzer wa = new WordAnalyzer();
             Dictionary<string, int> dic = wa.GetParticipleResult(article);
-            this.participleResult.Columns.Add("关键字", 120, HorizontalAlignment.Left);
-            this.participleResult.Columns.Add("出现次数", 120, HorizontalAlignment.Left);
-            this.participleResult.Columns.Add("出现频率", 120, HorizontalAlignment.Left);
+            //this.participleResult.Columns.Add("关键字", 120, HorizontalAlignment.Left);
+            //this.participleResult.Columns.Add("出现次数", 120, HorizontalAlignment.Left);
+            //this.participleResult.Columns.Add("出现频率", 120, HorizontalAlignment.Left);
             this.participleResult.BeginUpdate();
             int count = 1;
             foreach (int value in dic.Values)
@@ -161,9 +166,9 @@ namespace CQ
             foreach (string key in dic.Keys)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.Text =  key;
+                lvi.Text = key;
                 lvi.SubItems.Add(dic[key].ToString());
-                lvi.SubItems.Add(getPercentResult(dic[key],count));
+                lvi.SubItems.Add(Common.GetPercentResult(dic[key], count));
                 this.participleResult.Items.Add(lvi);
             }
             this.participleResult.EndUpdate();
@@ -178,19 +183,52 @@ namespace CQ
         {
 
         }
-        private String getPercentResult(int a, int b)
-        {
-            String result = "{0}%";
-            if (b == 0)
-            {
-                return result;
-            }
-            float c = (float)a / b;
-            float x = (float)Math.Round((double)c, 4);
-            return string.Format(result,x*100);
-        }
+
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkAll_CheckedChanged(object sender, EventArgs e)
+        {
+            //bool status = this.checkAll.Focus();
+            //foreach (ListViewItem item in this.keySearchResult.Items)
+            //{
+            //    item.ListView.CheckBoxes = status;
+            //}
+        }
+
+        private void copy_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            string type = this.copyType.Text;
+            int index = 0;
+            switch (type)
+            {
+                case "Id":
+                    break;
+                case "标题":
+                    index = 1;
+                    break;
+                case "价格":
+                    index = 2;
+                    break;
+                case "店铺":
+                    index = 3;
+                    break;
+                default:
+                    break;
+            }
+            foreach (ListViewItem item in keySearchResult.Items)
+            {
+                sb.AppendLine(item.SubItems[index].Text);
+            }
+            Clipboard.SetDataObject(sb.ToString(), true);
+            MessageBox.Show(string.Format("已经将{0}复制到粘贴板",type));
+        }
+
+        private void copyType_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
